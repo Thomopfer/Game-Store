@@ -1,0 +1,261 @@
+
+:root {
+    --body-bg: rgb(43, 42, 51);
+    --body-bg-tr: rgba(43, 42, 51, .8);
+    --cont-bg: rgb(58, 57, 68);
+    --text: #ffff;
+    --main-color: rgb(255, 151, 0);
+}
+
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1REM = 10PX */
+    scroll-behavior: smooth;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+
+    font-size: 4rem;
+}
+
+
+h2{
+    font-size: 4rem;
+    margin: 0;
+}
+
+h3{
+    font-size: 3rem;
+}
+
+/* tools */
+
+.visually-hidden{
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+}
+
+
+/* header */
+
+body{
+    /* background-image: url(../img/background2.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat; */
+    background-color: var(--body-bg);
+    font-family: 'Lato', sans-serif;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h1{
+    font-size: 7rem;
+    margin: 0;
+    padding: 5rem;
+    color: var(--main-color);
+    font-family: 'Titillium Web', sans-serif;
+}
+
+fieldset{
+    font-size: 2rem;
+    color: var(--text);
+}
+
+/* nav */
+
+.nav{
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--body-bg-tr);
+
+    position: sticky;
+    top: 0;
+
+    border-top: .1rem solid #737373;
+    border-bottom: .1rem solid #737373;
+}
+
+.nav a{
+    font-size: 3rem;
+    padding: 2rem;
+    transition: box-shadow .3s ease-out;
+    color: var(--text);
+}
+
+.index-html .nav-home{
+    color: rgb(255, 151, 0);
+}
+
+
+.nav a:hover{
+    box-shadow: inset
+    /* 0 -5rem 2rem -5rem */
+    0 0 2rem
+    rgba(0, 0, 0, .5);
+}
+
+.nav a:active{
+    color: rgb(195, 117, 0);
+}
+
+/* main */
+
+.container{
+    width: 120rem;
+    margin: 5rem auto;
+    background-color: var(--cont-bg);
+    border-radius: 2rem;
+    
+    box-shadow:
+    1rem 1rem 1rem
+    rgba(0, 0, 0, .5);
+}
+
+.game-section--title{
+    padding: 4rem;
+    text-align: center;
+    color: var(--text);
+}
+
+.game-section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+
+    gap: 2rem;
+    padding-bottom: 4rem;
+}
+
+.game{
+    height: 100%;
+    width: 25rem;
+
+    box-shadow: 
+    1rem 1rem 1rem
+    rgba(0, 0, 0, .5);
+}
+
+.game:hover{
+    box-shadow: 
+    1.4rem 1.4rem 1rem
+    rgba(0, 0, 0, .8);
+}
+
+.game img{
+    height: 30rem;
+    min-width: 25rem;
+    object-fit: cover;
+}
+
+.game-info{
+    padding: 1rem;
+    font-size: 3rem;
+    text-align: center;
+    width: 25rem;
+    height: 15rem;
+    color: var(--text);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+
+    /* background-color:rgb(43, 42, 51) ; */
+}
+
+.game-info p{
+    margin: 0;
+}
+
+.price{
+    padding-top: 1rem;
+    font-weight: 700;
+}
+
+/* footer */
+
+.footer{
+    border-top: .1rem solid #737373 ;
+    color: var(--text);
+}
+
+.footer p{
+    margin: 5rem;
+    font-size: 2rem;
+}
+
+/* THEME SELECTOR */
+
+.color-picker > fieldset{
+    border: 0;
+
+    display: flex;
+    gap: 5rem;
+
+    width: fit-content;
+    background-color: var(--cont-bg);
+    padding: 3rem;
+    margin-right: 5rem ;
+    border-radius: 2rem;
+}
+
+.color-picker input[type="radio"]{
+    appearance: none;
+    width: 3rem;
+    height: 3rem;
+    outline: .3rem solid var(--radio-color, currentColor);
+    outline-offset: .5rem;
+    border-radius: 50%;
+}
+
+.color-picker input[type="radio"]:checked{
+    background-color: var(--radio-color);
+}
+
+
+#dark-theme{
+    --radio-color: #111;
+}
+
+#light-theme{
+    --radio-color: #737373;
+}
+
+:root:has(#dark-theme:checked){
+    --body-bg: rgb(43, 42, 51);
+    --body-bg-tr: rgba(43, 42, 51, .8);
+    --cont-bg: rgb(58, 57, 68);
+    --text: #ffff;
+    --main-color: rgb(255, 151, 0);
+}
+
+:root:has(#light-theme:checked){
+    --body-bg: rgb(255, 255, 255);
+    --body-bg-tr: rgba(255, 255, 255, 0.8);
+    --cont-bg: rgb(193, 193, 193);
+    --text: rgb(0, 0, 0);
+    --main-color: rgb(255, 151, 0);
+}
