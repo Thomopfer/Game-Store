@@ -101,7 +101,10 @@ fieldset{
 }
 
 .index-html .nav-home,
-.action-html .nav-action{
+.action-html .nav-action,
+.shooter-html .nav-shooter,
+.horror-html .nav-horror,
+.sports-html .nav-sports{
     color: rgb(255, 151, 0);
 }
 
