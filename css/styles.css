@@ -55,10 +55,7 @@ h3{
 /* header */
 
 body{
-    /* background-image: url(../img/background2.png);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat; */
+    background-repeat: no-repeat;
     background-color: var(--body-bg);
     font-family: 'Lato', sans-serif;
 }
@@ -103,7 +100,8 @@ fieldset{
     color: var(--text);
 }
 
-.index-html .nav-home{
+.index-html .nav-home,
+.action-html .nav-action{
     color: rgb(255, 151, 0);
 }
 
