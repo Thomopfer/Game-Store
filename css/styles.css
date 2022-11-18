@@ -161,6 +161,9 @@ fieldset{
     1.4rem 1.4rem 1rem
     rgba(0, 0, 0, .8);
 }
+.game .game-info:hover{
+    color: rgb(255, 151, 0);
+}
 
 .game img{
     height: 30rem;
@@ -253,7 +256,7 @@ fieldset{
 :root:has(#light-theme:checked){
     --body-bg: rgb(255, 255, 255);
     --body-bg-tr: rgba(255, 255, 255, 0.8);
-    --cont-bg: rgb(193, 193, 193);
+    --cont-bg: rgb(255, 255, 255);
     --text: rgb(0, 0, 0);
     --main-color: rgb(255, 151, 0);
 }
