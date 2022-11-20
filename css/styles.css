@@ -124,9 +124,9 @@ fieldset{
 
 .container{
     width: 120rem;
-    margin: 5rem auto;
+    margin: 5rem auto 7rem;
     background-color: var(--cont-bg);
-    border-radius: 2rem;
+    /* border-radius: 2rem; */
     
     box-shadow:
     1rem 1rem 1rem
@@ -134,7 +134,7 @@ fieldset{
 }
 
 .game-section--title{
-    padding: 4rem;
+    padding: 6rem;
     text-align: center;
     color: var(--text);
 }
@@ -164,7 +164,7 @@ fieldset{
     1.4rem 1.4rem 1rem
     rgba(0, 0, 0, .8);
 }
-.game .game-info:hover{
+.game.game-info:hover{
     color: rgb(255, 151, 0);
 }
 
