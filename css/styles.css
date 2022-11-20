@@ -164,7 +164,7 @@ fieldset{
     1.4rem 1.4rem 1rem
     rgba(0, 0, 0, .8);
 }
-.game.game-info:hover{
+.game .game-info:hover{
     color: rgb(255, 151, 0);
 }
 
