@@ -291,7 +291,7 @@ fieldset{
     background-color: var(--cont-bg);
     padding: 3rem;
     margin-right: 5rem ;
-    border-radius: 2rem;
+    border-radius: 1rem;
 }
 
 .color-picker input[type="radio"]{
